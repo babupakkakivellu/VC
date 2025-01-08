@@ -1,18 +1,12 @@
-# Use the official Python image
-FROM python:3.10-slim
+FROM mysterysd/wzmlx:latest
 
-# Set the working directory in the container
-WORKDIR /app
+WORKDIR /usr/src/app
+RUN chmod 777 /usr/src/app
+RUN apt-get -y update && apt-get -qq install -y --no-install-recommends curl git gnupg2 unzip wget pv jq mediainfo
 
-# Copy requirements and install them
-COPY requirements.txt requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt .
+RUN pip3 install --no-cache-dir -r requirements.txt
 
-# Copy the bot's source code
 COPY . .
 
-# Expose any required ports (not strictly necessary here)
-EXPOSE 5000
-
-# Command to run the bot
 CMD ["python3", "vc_player_bot.py"]
