@@ -1,0 +1,4 @@
+pyrogram
+tgcrypto
+pytgcalls==3.0.0.dev19
+ffmpeg-python
