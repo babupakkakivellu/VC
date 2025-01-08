@@ -7,9 +7,9 @@ from pytgcalls.types.stream import StreamAudioEnded
 from pyrogram.types import Message
 
 # Telegram API credentials
-API_ID = 1234567  # Replace with your API ID
-API_HASH = "your_api_hash"  # Replace with your API Hash
-BOT_TOKEN = "your_bot_token"  # Replace with your Bot Token
+API_ID = 16501053  # Replace with your API ID
+API_HASH = "d8c9b01c863dabacc484c2c06cdd0f6e"  # Replace with your API Hash
+BOT_TOKEN = "8125717355:AAGEqXec28WfZ5V_wb4bkKoSyTt_slw6x2I"  # Replace with your Bot Token
 
 app = Client("vc_player_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 pytgcalls = PyTgCalls(app)
